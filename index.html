@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drawing</title>
+</head>
+
+<body>
+
+    <div class="top">
+        <h1>Gramma's FunPage</h1>
+    </div>
+
+    <div id="navbar" class="topnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <button onclick="myFunction()">Dark mode</button>
+      </div>
+
+    <div class="paint">
+   
+        <h2>Draw Your Own Picture</h2>
+        <div class="h"> Set Width: <input type="text" id="widthInput" onchange="setWidth(this.value)" /></div>
+        <div class="w">Set Height: <input type="text" id="heightInput" onchange="setHeight(this.value)" /></div>
+
+
+        <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX, event.offsetY)"
+            onmouseup="endPaint()"></canvas>
+
+        <div class="c">Brush Color:<input type="color" value="#000" onchange="setColor(this.value)"></div>
+        <div class="r">Brush Size:<input type="range" id="sizeInput" min="1" max="50" value="50"
+                oninput="resizeBrush(this.value)"></div>
+
+        <output id="sizeOutput">50</output>
+
+        <p>
+            <input type="button" id="clear" value="Clear Canvas" onclick="clearCanvas()">
+        </p>
+    </div>
+
+    <diV class="div2"></diV>
+
+
+
+
+
+    
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
